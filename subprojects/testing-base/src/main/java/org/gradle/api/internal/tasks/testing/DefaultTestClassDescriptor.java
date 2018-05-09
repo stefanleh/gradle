@@ -17,25 +17,18 @@
 package org.gradle.api.internal.tasks.testing;
 
 public class DefaultTestClassDescriptor extends DefaultTestSuiteDescriptor {
-    private final String classDisplayName;
 
     public DefaultTestClassDescriptor(Object id, String className) {
         this(id, className, className);
     }
 
     public DefaultTestClassDescriptor(Object id, String className, String classDisplayName) {
-        super(id, className);
-        this.classDisplayName = classDisplayName;
+        super(id, className, classDisplayName);
     }
 
     @Override
     public String getClassName() {
         return getName();
-    }
-
-    @Override
-    public String getDisplayName() {
-        return classDisplayName;
     }
 
     @Override
