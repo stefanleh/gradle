@@ -16,6 +16,7 @@
 package org.gradle.api.artifacts.component;
 
 import org.gradle.api.Incubating;
+import org.gradle.api.artifacts.ModuleIdentifier;
 import org.gradle.api.artifacts.VersionConstraint;
 import org.gradle.internal.scan.UsedByScanPlugin;
 
@@ -58,4 +59,6 @@ public interface ModuleComponentSelector extends ComponentSelector {
      */
     @Incubating
     VersionConstraint getVersionConstraint();
+
+    ModuleIdentifier getModuleIdentifier();
 }

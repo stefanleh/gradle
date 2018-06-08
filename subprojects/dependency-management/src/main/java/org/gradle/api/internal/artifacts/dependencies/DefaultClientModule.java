@@ -19,6 +19,7 @@ package org.gradle.api.internal.artifacts.dependencies;
 import org.gradle.api.artifacts.ClientModule;
 import org.gradle.api.artifacts.Dependency;
 import org.gradle.api.artifacts.ModuleDependency;
+import org.gradle.api.internal.artifacts.DefaultModuleIdentifier;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -32,7 +33,7 @@ public class DefaultClientModule extends AbstractExternalModuleDependency implem
     }
 
     public DefaultClientModule(String group, String name, String version, String configuration) {
-        super(group, name, version, configuration);
+        super(DefaultModuleIdentifier.newId(group, name), version, configuration);
     }
 
     public String getId() {

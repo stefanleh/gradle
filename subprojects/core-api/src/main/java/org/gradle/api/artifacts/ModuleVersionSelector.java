@@ -67,4 +67,7 @@ public interface ModuleVersionSelector {
      */
     @Incubating
     boolean matchesStrictly(ModuleVersionIdentifier identifier);
+
+    @Incubating
+    ModuleIdentifier getModule();
 }

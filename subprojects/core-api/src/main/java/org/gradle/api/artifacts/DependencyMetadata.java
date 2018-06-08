@@ -95,4 +95,6 @@ public interface DependencyMetadata<SELF extends DependencyMetadata> {
      */
     @Incubating
     SELF attributes(Action<? super AttributeContainer> configureAction);
+
+    ModuleIdentifier getModule();
 }
